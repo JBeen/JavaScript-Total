@@ -6,7 +6,7 @@
 
 ## Практические вопросы в форме приложения
 
-[https://thebestcode.ru/](https://thebestcode.ru/)
+[https://jbeen.github.io/](https://jbeen.github.io/)
 
 ## Оглавление
 
