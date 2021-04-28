@@ -1,24 +1,15 @@
-import { createQuestions } from '../questions/create-questions.js'
-import { createGame } from '../questions/create-game.js'
-
-import { hljs } from './hl.js'
-import { animateDetails } from './animate-details.js'
-import loader from './loader.js'
+import { createQuestions } from "../questions/create-questions.js";
+import { createGame } from "../questions/create-game.js";
+import { hljs } from "./hl.js";
 
 export const generatePage = () => {
-  loader.show()
+  const questions = createQuestions();
 
-  const questions = createQuestions()
-  main.innerHTML = questions
+  const main = document.querySelector("main");
+  main.innerHTML = questions;
 
-  game_btn.onclick = () => createGame()
+  const game_btn = document.querySelector("#game_btn");
+  game_btn.onclick = () => createGame();
 
-  hljs(globalThis)
-
-  animateDetails()
-
-  const timer = setTimeout(() => {
-    loader.hide()
-    clearTimeout(timer)
-  }, 1500)
-}
+  hljs(globalThis);
+};
